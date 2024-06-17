@@ -43,10 +43,10 @@ if(isset($_POST['register'])){
     if(empty($id)){
         $validation['idnum'] = "ID number is required";
     }
-    if(strlen($id) < 10){
+    if(strlen($id) < 5){
         $validation['idnum'] = "ID number must be 10 digits";
     }
-    if(strlen($id) > 10){
+    if(strlen($id) > 5){
         $validation['idnum'] = "ID number must be 10 digits";
     }
 

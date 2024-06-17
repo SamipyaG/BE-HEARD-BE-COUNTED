@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 
 ini_set('display_errors', 1); ini_set('display_startup_errors', 1); error_reporting(E_ALL);
 
@@ -14,6 +14,21 @@ function register($id, $firstname, $lastname, $email, $password, $age){
        return false;
     }
 }
+function connect(){
+    $hostname = "localhost";
+     $username = "root";
+     $password = "";
+     $dbname = "Voting";
+ 
+     $conn = mysqli_connect($hostname, $username, $password, $dbname);
+     
+     if(!$conn){
+         die("Connection failed: " . mysqli_connect_error());
+     }
+     else{
+         return $conn;
+     }
+ }
 
 
 function login($email, $password){
@@ -39,6 +54,23 @@ function logout(){
     unset($_SESSION['email']);
     unset($_SESSION['role']);
     header("Location: ../login.php");
+}
+function hasVoted($idnumber){
+    $conn = connect();
+    $sql = "SELECT * FROM tbl_users WHERE id = '$idnumber'";
+    $result = mysqli_query($conn, $sql);
+    if(mysqli_num_rows($result) > 0){
+        $user = mysqli_fetch_assoc($result);
+        if($user['hasVoted'] == '1'){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    else{
+        return false;
+    }
 }
 
 function vote($voteeId, $voterId){
@@ -80,21 +112,7 @@ function vote($voteeId, $voterId){
     }
 }
 
-function connect(){
-   $hostname = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "Voting";
 
-    $conn = mysqli_connect($hostname, $username, $password, $dbname);
-    
-    if(!$conn){
-        die("Connection failed: " . mysqli_connect_error());
-    }
-    else{
-        return $conn;
-    }
-}
 
 
     function verifyEmail($email){
@@ -126,23 +144,7 @@ function connect(){
     }
 
     // check if voter has voted
-    function hasVoted($idnumber){
-        $conn = connect();
-        $sql = "SELECT * FROM tbl_users WHERE id = '$idnumber'";
-        $result = mysqli_query($conn, $sql);
-        if(mysqli_num_rows($result) > 0){
-            $user = mysqli_fetch_assoc($result);
-            if($user['hasVoted'] == '1'){
-                return true;
-            }
-            else{
-                return false;
-            }
-        }
-        else{
-            return false;
-        }
-    }
+    
 
     function getWinner(){
         $conn = connect();
