@@ -1,4 +1,4 @@
-<?php session_start(); 
+<?php 
 include_once '../backend/logic.php';
 
 $contestants = getContestants();
@@ -37,10 +37,7 @@ $winner = getWinner();
                                     <tbody>
                             <?php foreach($contestants as $contestant){ ?>
                             <tr>
-                                <td>
-                                    <?php $image = $contestant['image_url'] ?>
-                                    <img src="../assets/images/<?php echo '$image'?>" class="image" alt="image" style="height: 100px; width: 100px; border-radius: 50%" />
-                                </td>
+                                
                                 <td><?php echo $contestant['first_name'] . ' ' . $contestant['last_name']; ?></td>
                                 <td>
                                 <form action="./backend/useraction.php" method="POST">
