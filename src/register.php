@@ -82,7 +82,7 @@
                                         <?php endif; ?>
                                     </div>
                                     <div class="form-outline form-white mb-2">
-                                        <input type="text" id="idnum" class="form-control form-control-lg"  placeholder="ID NUMBER" name="idnum" required />
+                                        <input type="text" id="idnum" class="form-control form-control-lg"  placeholder="CRN number" name="idnum" required />
                                         <?php if(isset($_SESSION['validation']['idnum'])): ?>
                                             <span class="text-danger"><?php 
                                             echo $_SESSION['validation']['idnum']; 
