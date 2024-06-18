@@ -8,7 +8,6 @@ $contestants = getContestants();
 <head>
     <title>login</title>
     <link rel="stylesheet" href="../assets/css/style.css">
-<<<<<<< HEAD
     <style>
          #contestantImage{
             width: 100px;
@@ -16,10 +15,6 @@ $contestants = getContestants();
             border-radius: 50%;
          }
     </style>
-=======
-
-    
->>>>>>> a84c33d83f9e3cacacbe97e38e60a2c71b76d608
 </head>
 <body>
                 <form action="./backend/useraction.php" method="post">
@@ -68,13 +63,7 @@ $contestants = getContestants();
                         <tbody>
                             <?php foreach($contestants as $contestant){ ?>
                             <tr>
-<<<<<<< HEAD
-                                <td>
-                                    <?php $image = $contestant['image_url'] ?>
-                                    <img src="../assets/images/<?php echo '$image'?>" class="image" alt="image" style="height: 100px; width: 100px; border-radius: 50%" />
-                                </td>
-=======
->>>>>>> a84c33d83f9e3cacacbe97e38e60a2c71b76d608
+                               
                                 <td><?php echo $contestant['first_name'] . ' ' . $contestant['last_name']; ?></td>
                                 <td>
                                 <form action="./backend/useraction.php" method="POST">

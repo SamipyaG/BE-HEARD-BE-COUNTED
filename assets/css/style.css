@@ -1,11 +1,13 @@
 body{
     background-color: #6DB3F2; 
-    background-image: url("../images/vote.jpg"); 
+    background-image: url("../images/voting-ballot-box.jpg"); 
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
 }
 
+  
+   
 #form-card{
     background-color: #fff;
     border-radius: 10px;
