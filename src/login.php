@@ -29,15 +29,15 @@
                                             ?></span>
                                         <?php endif; ?>
                                     </div>
-                                    <button type="submit" class="login1 " name="login">Login</button>
+                                    <button type="submit" class="Register " name="login">Login</button>
                                     <div class="row">
                                         <div class="col">
-                                            <a href="passwordreset.html"><br><br><br><br><br><br>Forgot password?</a>
+                                            <a href="passwordreset.html" class="link"><br><br><br><br><br><br>Forgot password?</a>
                                         </div>
                                     </div>
                                
                                 
-                                    <p>Not a member? <a href="register.php"><br>Register</a></p>
+                                    <p>Not a member? <a href="register.php" class="link"><br>Register</a></p>
                                 </form>
                            </div></div>
 </body>
