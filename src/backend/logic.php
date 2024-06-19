@@ -26,6 +26,22 @@ function connect(){
          return $conn;
      }
  }
+ function authorize(){
+    $sql = "SELECT * FROM admin WHERE email = '$email'";
+    $result = mysqli_query($conn, $sql);
+
+    // Check if any row exists
+    if(mysqli_num_rows($result) > 0){
+        mysqli_close($conn); // Close connection
+        return true; // Email is authorized as admin
+    } else {
+        mysqli_close($conn); // Close connection
+        echo "You are not authorized as admin. Please register as a user."; // Display message for non-authorized email
+        return false; // Email is not authorized as admin
+ }
+ 
+ }
+
 
 
 function login($email, $password){
