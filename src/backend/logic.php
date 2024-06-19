@@ -1,11 +1,8 @@
 <?php
 
-
-
-
-function register($id, $firstname, $lastname, $email, $password, $age){
+function register($id, $firstname, $lastname, $email, $password, $age,$role){
     $conn = connect();
-    $sql = "INSERT INTO tbl_users ( id, first_name, last_name, email, password, age, role) VALUES ('$id','$firstname', '$lastname', '$email', '$password', '$age', 'user')";
+    $sql = "INSERT INTO tbl_users ( id, first_name, last_name, email, password, age, role) VALUES ('$id','$firstname', '$lastname', '$email', '$password', '$age', '$role')";
     $result = mysqli_query($conn, $sql);
     if($result){
         return true;
@@ -143,7 +140,7 @@ function vote($voteeId, $voterId){
         }
     }
 
-    // check if voter has voted
+   
     
 
     function getWinner(){

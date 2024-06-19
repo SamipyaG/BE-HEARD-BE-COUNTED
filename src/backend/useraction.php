@@ -12,6 +12,7 @@ if(isset($_POST['register'])){
     $password = $_POST['password'];
     $age = $_POST['age'];
     $id = $_POST['idnum'];
+    $role=$_POST['role'];
 
     if(empty($firstname)){
         $validation['firstname'] = "First name is required";
@@ -56,7 +57,7 @@ if(isset($_POST['register'])){
 
     if(count($validation) == 0){
         // register the user
-        if(register($id, $firstname, $lastname, $email, $password, $age)){
+        if(register($id, $firstname, $lastname, $email, $password, $age,$role)){
             $_SESSION['message'] = "Registration successful please login";
             header("Location: ../login.php");
         }
