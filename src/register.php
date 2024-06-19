@@ -101,7 +101,7 @@
             if (lastname === "") {
                 alert("Please enter your last name");
                 isValid = false;
-            } else if (!/^[A-Za-z]+$/.test(lastname)) {
+            } else if (^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$.test(lastname)) {
                 alert("Last name should only contain alphabetic characters");
                 isValid = false;
             }
