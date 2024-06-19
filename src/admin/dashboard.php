@@ -10,7 +10,7 @@ $winner = getWinner();
     <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
 <body>
-              <a class="Link" href="/">Logout</a>
+            
     <section class="bg-image">
         <div class="align-items-center">
             <!-- show icon to print results-->
@@ -37,10 +37,8 @@ $winner = getWinner();
                                     <tbody>
                             <?php foreach($contestants as $contestant){ ?>
                             <tr>
-                                <td>
-                                    <?php $image = $contestant['image_url'] ?>
-                                    <img src="../assets/images/<?php echo '$image'?>" class="image" alt="image" style="height: 100px; width: 100px; border-radius: 50%" />
-                                </td>
+                                
+                                    
                                 <td><?php echo $contestant['first_name'] . ' ' . $contestant['last_name']; ?></td>
                                 <td>
                                 <form action="./backend/useraction.php" method="POST">
@@ -53,16 +51,17 @@ $winner = getWinner();
                             <?php } ?>
                             <tr class="" style="background-color: gray;">
                                 <td>WINNER</td>
-                                <td><?php echo $winner['first_name'] ?></td>
-                                <td><?php echo $winner['vote_count']  ?></td>
+                                <td><?php echo $winner['first_name']?></td>
+
+                                
                             </tr>
                             
                         </tbody>
                                 </table>
 
                                 <div class="row">
-                                    <a href="dashboard.html" class="col">Logout</a>
-                                    <a href="print.html" class="print">Print</a>
+                                    <a href="../../index.html" class="col">Logout</a>
+                                    
                                 </div>
                         
                             </div>
