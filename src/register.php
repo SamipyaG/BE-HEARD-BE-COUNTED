@@ -8,6 +8,7 @@
 </head>
 <body>
 
+<div class="box-container">
                                 <h1>
                                     Register 
                                     <?php if(isset($_SESSION['validation']['firstname'])): ?>
@@ -90,6 +91,6 @@
                 </div>
             </div>
                                         </div>
-
+                                        </div>
 </body>
 </html>

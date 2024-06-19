@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
-
+<div class="box-container">
                         <div class="card">
                                 <h1>
                                     Login
@@ -29,15 +29,16 @@
                                             ?></span>
                                         <?php endif; ?>
                                     </div>
+                                    <button type="submit" class="login1 " name="login">Login</button>
                                     <div class="row">
                                         <div class="col">
-                                            <a href="passwordreset.html">Forgot password?</a>
+                                            <a href="passwordreset.html"><br><br><br><br><br><br>Forgot password?</a>
                                         </div>
                                     </div>
-                                <button type="submit" class="login1 " name="login">Login</button>
+                               
                                 
-                                    <p>Not a member? <a href="register.php">Register</a></p>
+                                    <p>Not a member? <a href="register.php"><br>Register</a></p>
                                 </form>
-                           </div>
+                           </div></div>
 </body>
 </html>
