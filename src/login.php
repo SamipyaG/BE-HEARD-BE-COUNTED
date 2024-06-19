@@ -30,14 +30,10 @@
                                         <?php endif; ?>
                                     </div>
                                     <button type="submit" class="Register " name="login">Login</button>
-                                    <div class="row">
-                                        <div class="col">
-                                            <a href="passwordreset.html" class="link"><br><br><br><br><br><br>Forgot password?</a>
-                                        </div>
-                                    </div>
-                               
-                                
-                                    <p>Not a member? <a href="register.php" class="link"><br>Register</a></p>
+                                   
+                                    <p class="Login"> <a href="../src/passwordreset.html" class="link">Forgot password?</a></p>
+                                    <p class="Login">Not a member? <a href="../src/Register.php" class="link"><br>Register</a></p>
+                                    
                                 </form>
                            </div></div>
 </body>
