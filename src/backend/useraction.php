@@ -45,10 +45,10 @@ if(isset($_POST['register'])){
         $validation['idnum'] = "ID number is required";
     }
     if(strlen($id) < 5){
-        $validation['idnum'] = "ID number must be 10 digits";
+        $validation['idnum'] = "CRN number must be 5 digits";
     }
     if(strlen($id) > 5){
-        $validation['idnum'] = "ID number must be 10 digits";
+        $validation['idnum'] = "CRN number must be 5 digits";
     }
 
     if(verifyEmail($email)){
@@ -129,6 +129,10 @@ elseif(isset($_POST['vote'])){
         $_SESSION['message'] = "Sorry you have already voted";
         header("Location: ../dashboard.php");
     }
+}
+elseif(!authorize($email)){
+    $validation['role']="You are not authorize to be admin";
+    
 }
 
 

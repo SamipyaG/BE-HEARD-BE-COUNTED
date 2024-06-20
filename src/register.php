@@ -68,6 +68,10 @@
                     <option value="user" selected>User</option>
                     <option value="admin">Admin</option>
                 </select>
+                <?php if(isset($_SESSION['validation']['role'])): ?>
+                    <span class="validate"><?php echo $_SESSION['validation']['role']; ?></span>
+                    <?php unset($_SESSION['validation']['role']); ?>
+                <?php endif; ?>
             </div>
             <div class="content">
                 <button type="submit" class="Register" name="register">Register</button>
@@ -79,68 +83,69 @@
     </div>
     <script>
         function validateForm() {
-            var firstname = document.getElementById('firstname').value.trim();
-            var lastname = document.getElementById('lastname').value.trim();
-            var email = document.getElementById('email').value.trim();
-            var password = document.getElementById('password').value.trim();
-            var idnum = document.getElementById('idnum').value.trim();
-            var age = document.getElementById('age').value.trim();
-            
-            var isValid = true;
+    var firstname = document.getElementById('firstname').value.trim();
+    var lastname = document.getElementById('lastname').value.trim();
+    var email = document.getElementById('email').value.trim();
+    var password = document.getElementById('password').value.trim();
+    var idnum = document.getElementById('idnum').value.trim();
+    var age = document.getElementById('age').value.trim();
+    
+    var isValid = true;
 
-            // Validation for First Name
-            if (firstname === "") {
-                alert("Please enter your first name");
-                isValid = false;
-            } else if (!/^[A-Za-z]+$/.test(firstname)) {
-                alert("First name should only contain alphabetic characters");
-                isValid = false;
-            }
+    // Validation for First Name
+    if (firstname === "") {
+        alert("Please enter your first name");
+        isValid = false;
+    } else if (!/^[A-Za-z]+$/.test(firstname)) {
+        alert("First name should only contain alphabetic characters");
+        isValid = false;
+    }
 
-            // Validation for Last Name
-            if (lastname === "") {
-                alert("Please enter your last name");
-                isValid = false;
-            } else if (^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$.test(lastname)) {
-                alert("Last name should only contain alphabetic characters");
-                isValid = false;
-            }
+    // Validation for Last Name
+    if (lastname === "") {
+        alert("Please enter your last name");
+        isValid = false;
+    } else if (!/^[A-Za-z]+$/.test(lastname)) {
+        alert("Last name should only contain alphabetic characters");
+        isValid = false;
+    }
 
-            // Validation for Email
-            if (email === "") {
-                alert("Please enter your email");
-                isValid = false;
-            } else if (!/\S+@\S+\.\S+/.test(email)) {
-                alert("Please enter a valid email address");
-                isValid = false;
-            }
+    // Validation for Email
+    if (email === "") {
+        alert("Please enter your email");
+        isValid = false;
+    } else if (!/\S+@\S+\.\S+/.test(email)) {
+        alert("Please enter a valid email address");
+        isValid = false;
+    }
 
-            // Validation for Password
-            if (password === "") {
-                alert("Please enter a password");
-                isValid = false;
-            } else if (password.length < 8 || password.length > 12) {
-                alert("Password must be between 8 to 12 characters");
-                isValid = false;
-            }
+    // Validation for Password
+    if (password === "") {
+        alert("Please enter a password");
+        isValid = false;
+    } else if (password.length < 8 || password.length > 12) {
+        alert("Password must be between 8 to 12 characters");
+        isValid = false;
+    }
 
-            // Validation for CRN Number
-            if (idnum === "") {
-                alert("Please enter your CRN number");
-                isValid = false;
-            }
+    // Validation for CRN Number
+    if (idnum === "") {
+        alert("Please enter your CRN number");
+        isValid = false;
+    }
 
-            // Validation for Age
-            if (age === "") {
-                alert("Please enter your age");
-                isValid = false;
-            } else if (isNaN(age) || parseInt(age) < 18) {
-                alert("Age must be a number greater than or equal to 18");
-                isValid = false;
-            }
+    // Validation for Age
+    if (age === "") {
+        alert("Please enter your age");
+        isValid = false;
+    } else if (isNaN(age) || parseInt(age) < 18) {
+        alert("Age must be a number greater than or equal to 18");
+        isValid = false;
+    }
 
-            return isValid;
-        }
+    return isValid;
+}
+
     </script>
 </body>
 </html>
