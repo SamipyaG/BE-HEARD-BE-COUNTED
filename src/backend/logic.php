@@ -26,7 +26,7 @@ function connect(){
          return $conn;
      }
  }
- function authorize(){
+ function authorize($email){
     $conn = connect();
     $sql = "SELECT * FROM admin WHERE email = '$email'";
     $result = mysqli_query($conn, $sql);

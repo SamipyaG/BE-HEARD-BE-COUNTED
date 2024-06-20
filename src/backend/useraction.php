@@ -54,6 +54,10 @@ if(isset($_POST['register'])){
     if(verifyEmail($email)){
         $validation['email'] = "Email already exists";
     }
+    if(!authorize($email))
+    {
+        $validation['role']="Sorry! You don't have the permission to be an admin. ";
+    }
 
     if(count($validation) == 0){
         // register the user
@@ -130,10 +134,9 @@ elseif(isset($_POST['vote'])){
         header("Location: ../dashboard.php");
     }
 }
-elseif(!authorize($email)){
-    $validation['role']="You are not authorize to be admin";
+
     
-}
+
 
 
 else{
