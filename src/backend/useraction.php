@@ -54,14 +54,18 @@ if(isset($_POST['register'])){
     if(verifyEmail($email)){
         $validation['email'] = "Email already exists";
     }
-    if(!authorize($email))
+    if(!authorize($email,$role))
     {
         $validation['role']="Sorry! You don't have the permission to be an admin. ";
+    }
+    if(!Crn_check(!$idnum))
+    {
+        $validation['idnum']="Invalid CRN number";
     }
 
     if(count($validation) == 0){
         // register the user
-        if(register($id, $firstname, $lastname, $email, $password, $age,$role)){
+        if(register($id, $firstname, $lastname, $email, $password, $age,$role,$idnum)){
             $_SESSION['message'] = "Registration successful please login";
             header("Location: ../login.php");
         }
