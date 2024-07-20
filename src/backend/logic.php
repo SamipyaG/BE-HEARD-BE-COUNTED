@@ -1,5 +1,6 @@
 <?php
 
+
 function register($id, $firstname, $lastname, $email, $password, $age,$role){
     $conn = connect();
     $sql = "INSERT INTO tbl_users ( id, first_name, last_name, email, password, age, role) VALUES ('$id','$firstname', '$lastname', '$email', '$password', '$age', '$role')";

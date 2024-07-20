@@ -60,7 +60,7 @@ $winner = getWinner();
                                 </table>
 
                                 <div class="row">
-                                    <a href="../../index.html" class="col">Logout</a>
+                                    <a href="../../index.html" class="col">Logout</a><br>
                                     
                                 </div>
                         

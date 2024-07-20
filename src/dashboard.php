@@ -19,7 +19,7 @@ $contestants = getContestants();
 <body>
                 <form action="./backend/useraction.php" method="post">
                     <button type="submit" class="button" name="logout">Logout</button>
-                </form>
+                </form><br><br>
 
       <?php
         if(isset($_SESSION['message'])): ?>
