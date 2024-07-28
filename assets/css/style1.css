@@ -1,0 +1,73 @@
+/*Its the css for header footer and nav
+*/
+
+
+
+/* Header Styles */
+#main-header {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-item {
+  margin: 0 15px;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: 2px solid white;
+  border-radius: 25px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-link:hover {
+  background-color: white;
+  color: #4CAF50;
+}
+
+/* Main Content Styles */
+#main-content {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.intro h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.intro p {
+  font-size: 1.2em;
+  margin: 20px 0;
+  color: #666;
+}
+
+/* Footer Styles */
+#main-footer {
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
