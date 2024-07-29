@@ -5,15 +5,15 @@
     <meta charset="UTF-8">
     <title>Registration Form</title>
     <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/style1.css">
+    <link rel="stylesheet" href="../assets/css/style1.css">
 </head>
 <body>
 <header id="main-header">
         <nav class="navbar">
             <ul class="nav-list">
-                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                <li class="nav-item">  <a href="src/register.php" class="nav-link">Register</a></li>
-                <li class="nav-item"> <a href="src/login.php" class="nav-link">Login</a></li>
+                <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+                <li class="nav-item">  <a href="../src/register.php" class="nav-link">Register</a></li>
+                <li class="nav-item"> <a href="../src/login.php" class="nav-link">Login</a></li>
             </ul>
         </nav>
     </header>

@@ -1,35 +1,31 @@
-body{
-    background-color: #6DB3F2; 
-    background-image: url("../images/voting-ballot-box.jpg"); 
+
+
+body {
+    background-color: #6DB3F2;
+    background-image: url("../images/voting-ballot-box.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
-}
-.row {
-    margin-top: -100px; 
+    font-family: Arial, sans-serif;
+    padding: 10px;
 }
 
-/* Style for the box container*/
+.row {
+    margin-top: -100px;
+}
+
 .box-container {
     max-width: 300px;
-    margin-left: 0; 
+    margin-left: 0;
     margin-right: auto;
     padding: 10px;
-    background-color: #fff; 
+    background-color: #fff;
     border: 1px solid #ccc;
-    border-radius: 5px; 
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); 
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     color: black;
-} 
-
-/* General body styling */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-    padding: 10px;
 }
 
-/* Style for input fields */
 .Form {
     width: 100%;
     padding: 10px;
@@ -40,9 +36,8 @@ body {
     box-sizing: border-box;
 }
 
-/* Style for the button */
 .Register {
-    background-color: #4CAF50; /* Green */
+    background-color: #4CAF50;
     border: none;
     color: white;
     padding: 15px 20px;
@@ -55,17 +50,14 @@ body {
     border-radius: 4px;
 }
 
-/* Style for the Login link */
 .Login .link {
-    color: #0000EE; /* Blue */
-   
+    color: #0000EE;
 }
 
 .Login .link:hover {
     text-decoration: underline;
 }
 
-/* Style the header */
 h1 {
     font-size: 24px;
     color: #333;
@@ -73,14 +65,14 @@ h1 {
     margin-bottom: 20px;
 }
 
-#button-section{
+#button-section {
     margin-top: 20px;
     margin-bottom: 5%;
     justify-content: center;
     display: flex;
 }
 
-.register{
+.register {
     background-color: #6DB3F2;
     border: none;
     border-radius: 5px;
@@ -93,7 +85,7 @@ h1 {
     margin: 0 10px;
 }
 
-.login{
+.login {
     background-color: #6DB3F2;
     border: none;
     border-radius: 5px;
@@ -105,6 +97,5 @@ h1 {
     cursor: pointer;
     margin: 0 10px;
 }
-
 
 
