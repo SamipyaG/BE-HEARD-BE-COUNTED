@@ -13,9 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Connect to the database
         $conn = connect(); 
 
-        // Escape user inputs for security
-        $email = mysqli_real_escape_string($conn, $email);
-        $newPassword = mysqli_real_escape_string($conn, $newPassword);
+        
 
         // Update the user's password in the database
         $sql = "UPDATE tbl_users SET password='$newPassword' WHERE email='$email'";
@@ -30,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             } else {
                 echo "<script>
                         alert('Email not found.');
-                        window.location.href = 'updatepassword.php';
+                        window.location.href = 'passwordreset.html';
                       </script>";
             }
       
@@ -40,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } else {
         echo "<script>
                 alert('Please provide both email and new password.');
-                window.location.href = 'updatepassword.php';
+                window.location.href = 'passwordreset.html';
               </script>";
     }
 } else {
