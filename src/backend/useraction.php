@@ -1,7 +1,7 @@
 <?php
-
-include_once './logic.php';
 session_start();
+include_once './logic.php';
+
 
 $validation = [];
 
@@ -65,8 +65,8 @@ if(isset($_POST['register'])){
 
     if(count($validation) == 0){
         // register the user
-        if(register($id, $firstname, $lastname, $email, $password, $age,$role,$idnum)){
-            $_SESSION['message'] = "Registration successful please login";
+        if(register($id, $firstname, $lastname, $email, $password, $age,$role)){
+           
             header("Location: ../login.php");
         }
         else{

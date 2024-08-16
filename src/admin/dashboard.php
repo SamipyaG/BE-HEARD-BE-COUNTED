@@ -63,7 +63,7 @@ $winner = getWinner();
                 <div class="col">
                     <div class="card">
                         <div class="card-body">
-                            <h1 class="text-center">
+                            <h1 class="text-center"><br><br>
                                 General Election
                             </h1>
                             <table class="table">
